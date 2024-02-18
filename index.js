@@ -14,6 +14,10 @@ const io = new Server(server, {
   },
 });
 
+app.use('/',(req,res)=>{
+  res.send('Hello..Welcome to ChatAPP BACKEND')
+})
+
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
 
